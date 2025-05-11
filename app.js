@@ -17,6 +17,7 @@ const userRoutes = require('./routes/userRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const verifierRoutes = require('./routes/verifierRoutes');
 
+
 // Initialize Express app
 const app = express();
 
@@ -72,6 +73,7 @@ app.use('/verifier', verifierRoutes); // Verifier-specific routes
 app.use((req, res, next) => {
   res.status(404).render('404', { url: req.originalUrl });
 });
+
 
 // Start the server
 const PORT = process.env.PORT || 5000;

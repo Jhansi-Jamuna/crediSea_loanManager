@@ -1,9 +1,23 @@
 <%- include('../partials/header') %>
 
 <div class="container my-5">
-  <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2>Your Loan Applications</h2>
-    <a href="/user/apply" class="btn btn-primary">Apply for a Loan</a>
+  <!-- Search Input -->
+  <div class="d-flex justify-content-center mb-4">
+    <input type="search" class="form-control search-input" placeholder="Search for loans" />
+    <div>
+  <!-- Apply For Loan Button -->
+  <button type="button" class="btn btn-primary ms-2" onclick="window.location.href='/user/apply'">
+    Apply For Loan
+  </button>
+
+  <!-- Logout Button -->
+  <form action="/login" method="POST" style="display: inline;">
+    <button type="submit" class="btn btn-danger ms-2">
+      Logout
+    </button>
+  </form>
+</div>
+
   </div>
 
   <% if (applications.length > 0) { %>
@@ -19,7 +33,6 @@
             <th>Loan Reason</th>
             <th>Status</th>
             <th>Applied On</th>
-            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -41,13 +54,6 @@
                 <% } %>
               </td>
               <td><%= new Date(app.createdAt).toLocaleDateString() %></td>
-              <td>
-                <!-- <form action="/user/delete/<%= app._id %>" method="POST" onsubmit="return confirm('Are you sure you want to delete this application?');">
-                  <button type="submit" class="btn btn-sm btn-danger" title="Delete">
-                    <i class="bi bi-trash"></i>
-                  </button>
-                </form> -->
-              </td>
             </tr>
           <% }) %>
         </tbody>
@@ -59,5 +65,37 @@
     </div>
   <% } %>
 </div>
+
+<style>
+  /* Centered Search Input with Box Shadow */
+.search-input {
+  width: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Table Styling */
+.table thead th {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+.table tbody td {
+  font-family: 'Mulish', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+/* Badge Styling */
+.badge {
+  font-size: 0.9em;
+  padding: 0.5em 0.75em;
+}
+
+</style>
 
 <%- include('../partials/footer') %>

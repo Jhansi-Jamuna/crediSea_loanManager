@@ -81,4 +81,16 @@ View application status:
 
 Go to the Dashboard to see the status of your loan applications.
 
+Login for admin:
+user: abcd@gmail.com
+pass: 12345
+
+login for user:
+user: jhansijamuna@gmail.com
+pass: jhansi
+
+login for verifier:
+user: qwerty@gmail.com
+pass: qwerty
+
 DEPLOY LINK:

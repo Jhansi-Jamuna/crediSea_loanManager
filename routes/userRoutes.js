@@ -20,10 +20,13 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
+
+
 const { ensureAuthenticated } = require('../middleware/auth');
 
 router.get('/apply', ensureAuthenticated, userController.getApplyForm);
 router.post('/apply', ensureAuthenticated, userController.postApplication);
 router.get('/dashboard', ensureAuthenticated, userController.getDashboard);
+
 
 module.exports = router;

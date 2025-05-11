@@ -27,6 +27,12 @@
       <button type="submit" class="btn-submit">Sign Up</button>
     </form>
     <p class="signin-link">Already have an account? <a href="/login">Login</a></p>
+    <% if (success_msg) { %>
+  <div class="alert alert-success"><%= success_msg %></div>
+<% } %>
+<% if (error_msg) { %>
+  <div class="alert alert-danger"><%= error_msg %></div>
+<% } %>
   </div>
 </div>
 
@@ -41,7 +47,7 @@
 body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(135deg, #6e7dff, #a8c0ff);
-  height: 100vh;
+  height: 120vh;
   color: #333;
   flex-direction: column;
 }

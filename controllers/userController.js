@@ -54,28 +54,29 @@ exports.getApplyForm = (req, res) => {
   res.render('user/applyform');
 };
 
-exports.postApplication = async (req, res) => {
-  const { fullName, loanAmount, tenure, employmentStatus, employmentAddress, loanReason } = req.body;
-  const email = req.session.user.email;
-  try {
-    const application = new Application({
-      fullName,
-      loanAmount,
-      tenure,
-      employmentStatus,
-      employmentAddress,
-      loanReason,
-      email
-    });
-    await application.save();
-    req.flash('success_msg', 'Application submitted successfully');
-    res.redirect('/user/dashboard');
-  } catch (err) {
-    req.flash('error_msg', 'Error submitting application');
-    res.redirect('/user/apply');
-  }
-};
+   exports.postApplication = async (req, res) => {
+       const { fullName, loanAmount, tenure, employmentStatus, employmentAddress, loanReason } = req.body;
+       const email = req.session.user.email;
+       try {
+         const application = new Application({
+           fullName,
+           loanAmount,
+           tenure,
+           employmentStatus,
+           employmentAddress,
+           loanReason,
+           email
+         });
+         await application.save();
+         req.flash('success_msg', 'Application submitted successfully');
+         res.redirect('/user/dashboard'); // Redirect to user dashboard after submission
+       } catch (err) {
+         req.flash('error_msg', 'Error submitting application');
+         res.redirect('/user/apply');
+       }
+     }; 
 
+     
 exports.getDashboard = async (req, res) => {
   const email = req.session.user.email;
   try {
