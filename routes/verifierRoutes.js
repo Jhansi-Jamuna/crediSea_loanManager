@@ -7,4 +7,8 @@ router.get('/dashboard', ensureAuthenticated, verifierController.getVerifierDash
 router.post('/approve/:id', ensureAuthenticated, verifierController.approveApplication);
 router.post('/reject/:id', ensureAuthenticated, verifierController.rejectApplication);
 
+router.get('/dashboard', (req, res) => {
+  res.send('Verifier Dashboard');
+});
+
 module.exports = router;

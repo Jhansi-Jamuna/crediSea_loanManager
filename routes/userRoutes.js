@@ -28,5 +28,13 @@ router.get('/apply', ensureAuthenticated, userController.getApplyForm);
 router.post('/apply', ensureAuthenticated, userController.postApplication);
 router.get('/dashboard', ensureAuthenticated, userController.getDashboard);
 
+router.get('/dashboard', (req, res) => {
+  res.send('User Dashboard');
+});
+
+router.get('/apply', (req, res) => {
+  res.send('User Apply Page');
+});
+
 
 module.exports = router;

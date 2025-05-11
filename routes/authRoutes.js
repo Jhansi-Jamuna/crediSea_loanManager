@@ -9,6 +9,15 @@ router.get('/login', forwardAuthenticated, authController.getLogin);
 router.post('/login', forwardAuthenticated, authController.postLogin);
 router.get('/logout', authController.logout);
 
+router.get('/login', (req, res) => {
+  res.send('Login Page');
+});
+
+router.get('/signup', (req, res) => {
+  res.send('Signup Page');
+}); 
+
+
 // authRoutes.js
 router.post('/logout', (req, res) => {
   req.logout(function(err) {
