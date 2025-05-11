@@ -1,0 +1,63 @@
+<%- include('../partials/header') %>
+
+<div class="container my-5">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Your Loan Applications</h2>
+    <a href="/user/apply" class="btn btn-primary">Apply for a Loan</a>
+  </div>
+
+  <% if (applications.length > 0) { %>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead class="table-light">
+          <tr>
+            <th>Full Name</th>
+            <th>Loan Amount</th>
+            <th>Tenure (months)</th>
+            <th>Employment Status</th>
+            <th>Employment Address</th>
+            <th>Loan Reason</th>
+            <th>Status</th>
+            <th>Applied On</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% applications.forEach(app => { %>
+            <tr>
+              <td><%= app.fullName %></td>
+              <td>₹<%= app.loanAmount.toLocaleString() %></td>
+              <td><%= app.tenure %></td>
+              <td><%= app.employmentStatus %></td>
+              <td><%= app.employmentAddress %></td>
+              <td><%= app.loanReason %></td>
+              <td>
+                <% if (app.status === 'Approved') { %>
+                  <span class="badge bg-success">Approved</span>
+                <% } else if (app.status === 'Rejected') { %>
+                  <span class="badge bg-danger">Rejected</span>
+                <% } else { %>
+                  <span class="badge bg-secondary">Pending</span>
+                <% } %>
+              </td>
+              <td><%= new Date(app.createdAt).toLocaleDateString() %></td>
+              <td>
+                <!-- <form action="/user/delete/<%= app._id %>" method="POST" onsubmit="return confirm('Are you sure you want to delete this application?');">
+                  <button type="submit" class="btn btn-sm btn-danger" title="Delete">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </form> -->
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  <% } else { %>
+    <div class="alert alert-info" role="alert">
+      You have not submitted any loan applications yet.
+    </div>
+  <% } %>
+</div>
+
+<%- include('../partials/footer') %>

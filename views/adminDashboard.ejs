@@ -1,0 +1,566 @@
+
+<%- include("partials/header") %>
+<div class="bg-dashboard d-flex">
+  <aside class="sidebar d-flex flex-column justify-content-between">
+    <div>
+      <div class="user-profile d-flex align-items-center p-3 text-white border-bottom">
+        <i class="bi bi-person-circle fs-3 me-2"></i>
+        <p class="mb-0">John Doe</p>
+      </div>
+
+      <nav class="nav flex-column pt-3 pb-3 text-white">
+        <a href="#" class="nav-link-q text-white"><i class="bi bi-house-door-fill me-2"></i>Dashboard</a>
+        <a href="#" class="nav-link-q text-white"><i class="bi bi-person-dash-fill me-2"></i>Borrowers</a>
+        <a href="#" class="nav-link-q text-white"><i class="bi bi-cash me-2"></i>Loans</a>
+        <a href="#" class="nav-link-q text-white"><i class="bi bi-person-check-fill me-2"></i>Repayments</a>
+        <a href="#" class="nav-link-q text-white"><i class="bi bi-speedometer2 me-2"></i>Loan Parameters</a>
+        <a href="#" class="nav-link-q text-white"><i class="bi bi-person-vcard me-2"></i>Accounting</a>
+        <a href="#" class="nav-link-q text-white"><i class="bi bi-bar-chart me-2"></i>Reports</a>
+        <a href="#" class="nav-link-q text-white"><i class="bi bi-file-earmark-arrow-up-fill me-2"></i>Collateral</a>
+        <a href="#" class="nav-link-q text-white"><i class="bi bi-person-fill-gear me-2"></i>Access Configure</a>
+        <a href="#" class="nav-link-q text-white"><i class="bi bi-piggy-bank-fill me-2"></i>Savings</a>
+        <a href="#" class="nav-link-q text-white"><i class="bi bi-cash-stack me-2"></i>Expenses</a>
+        <a href="#" class="nav-link-q text-white"><i class="bi bi-slash-square-fill me-2"></i>E-signature</a>
+        <a href="#" class="nav-link-q text-white"><i class="bi bi-wallet-fill me-2"></i>Investor Accounts</a>
+        <a href="#" class="nav-link-q text-white"><i class="bi bi-calendar-day-fill me-2"></i>Calendar</a>
+        <a href="#" class="nav-link-q text-white"><i class="bi bi-gear-fill me-2"></i>Settings</a>
+      </nav>
+    </div>
+    <div class="p-3">
+      <a href="/login" class="nav-link-sign text-danger fw-semibold">Sign Out<i class="bi bi-box-arrow-right ms-2"></i></a>
+    </div>
+  </aside>
+
+  <main class="dashboard-content flex-grow-1 p-4">
+  <!-- Main dashboard content goes here -->
+  <h4>Dashboard</h4>
+  <div class="cards-container d-flex flex-wrap gap-4">
+    <div class="card-box d-flex align-items-center p-3">
+      <i class="bi bi-cash dash-icon me-3"></i>
+      <div>
+        <h4>300</h4>
+        <h6>ACTIVE USERS</h6>
+      </div>
+    </div>
+    <div class="card-box d-flex align-items-center p-3">
+      <i class="bi bi-person-dash-fill dash-icon me-3"></i>
+      <div>
+        <h4>100</h4>
+        <h6>BORROWERS</h6>
+      </div>
+    </div>
+    <div class="card-box d-flex align-items-center p-3">
+      <i class="bi bi-cash-stack dash-icon me-3"></i>
+      <div>
+        <h4>550,000</h4>
+        <h6>CASH DISBURSED</h6>
+      </div>
+    </div>
+    <div class="card-box d-flex align-items-center p-3">
+      <i class="bi bi-piggy-bank-fill dash-icon me-3"></i>
+      <div>
+        <h4>1,000,000</h4>
+        <h6>CASH RECEIVED</h6>
+      </div>
+    </div>
+    <div class="card-box d-flex align-items-center p-3">
+      <i class="bi bi-graph-up dash-icon me-3"></i>
+      <div>
+        <h4>450,000</h4>
+        <h6>SAVINGS</h6>
+      </div>
+    </div>
+    <div class="card-box d-flex align-items-center p-3">
+      <i class="bi bi-person-check-fill dash-icon me-3"></i>
+      <div>
+        <h4>30</h4>
+        <h6>REPAID LOANS</h6>
+      </div>
+    </div>
+    <div class="card-box d-flex align-items-center p-3">
+      <i class="bi bi-graph-up dash-icon me-3"></i>
+      <div>
+        <h4>10</h4>
+        <h6>OTHER ACCOUNTS</h6>
+      </div>
+    </div>
+    <div class="card-box d-flex align-items-center p-3">
+      <i class="bi bi-graph-up dash-icon me-3"></i>
+      <div>
+        <h4>50</h4>
+        <h6>LOANS</h6>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="applied-card">
+  <nav class="nav d-flex justify-content-between align-items-center mb-3">
+    <h4>Applied Loans</h4>
+    <div>
+      <a href="#">Sort</a>
+      <a href="#" class="ms-3">Filter</a>
+    </div>
+  </nav>
+
+  <table class="custom-table">
+  <thead>
+    <tr>
+      <th>User Recent Activity</th>
+      <th>Customer Name</th>
+      <th>Date</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <span class="avatar bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center me-2">T</span>
+          <div>
+            <p class="mb-0">Contact Email Not Linked</p>
+            <small class="text-muted">Updated 1 day ago</small>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="mb-0">Tom Cruise</p>
+        <small class="text-muted">on 24.05.2019</small>
+      </td>
+      <td>
+        <p class="mb-0">June 09, 2021</p>
+        <small class="text-muted">6:30 PM</small>
+      </td>
+      <td><button class="btn btn-warning btn-sm">PENDING</button></td>
+      <td>
+        <i class="bi bi-three-dots-vertical"></i>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <span class="avatar bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center me-2">M</span>
+          <div>
+            <p class="mb-0">Adding Imaes to Featured Posts</p>
+            <small class="text-muted">Updated 1 day ago</small>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="mb-0">Matt Damon</p>
+        <small class="text-muted">on 24.05.2019</small>
+      </td>
+      <td>
+        <p class="mb-0">June 09, 2021</p>
+        <small class="text-muted">8:00 PM</small>
+      </td>
+      <td><button class="btn btn-warning btn-sm">PENDING</button></td>
+      <td>
+        <i class="bi bi-three-dots-vertical"></i>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <span class="avatar bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center me-2">R</span>
+          <div>
+            <p class="mb-0">When will I be charged this month?</p>
+            <small class="text-muted">Updated 1 day ago</small>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="mb-0">Robert Downey</p>
+        <small class="text-muted">on 24.05.2019</small>
+      </td>
+      <td>
+        <p class="mb-0">June 08, 2021</p>
+        <small class="text-muted">7:30 PM</small>
+      </td>
+      <td><button class="btn btn-warning btn-sm">PENDING</button></td>
+      <td>
+        <i class="bi bi-three-dots-vertical"></i>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <span class="avatar bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center me-2">T</span>
+          <div>
+            <p class="mb-0">Payment not going through</p>
+            <small class="text-muted">Updated 2 days ago</small>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="mb-0">Christian Bale</p>
+        <small class="text-muted">on 24.05.2019</small>
+      </td>
+      <td>
+        <p class="mb-0">June 08, 2021</p>
+        <small class="text-muted">5:30 PM</small>
+      </td>
+      <td><button class="btn btn-warning btn-sm">PENDING</button></td>
+      <td>
+        <i class="bi bi-three-dots-vertical"></i>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <span class="avatar bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center me-2">H</span>
+          <div>
+            <p class="mb-0">Unable to add replies</p>
+            <small class="text-muted">Updated 2 days ago</small>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="mb-0">Henry Cavil</p>
+        <small class="text-muted">on 24.05.2019</small>
+      </td>
+      <td>
+        <p class="mb-0">June 08, 2021</p>
+        <small class="text-muted">4:00 PM</small>
+      </td>
+      <td><button class="btn btn-warning btn-sm">PENDING</button></td>
+      <td>
+        <i class="bi bi-three-dots-vertical"></i>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <span class="avatar bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center me-2">M</span>
+          <div>
+            <p class="mb-0">Contact Email Not Linked</p>
+            <small class="text-muted">Updated 1 day ago</small>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="mb-0">Matt Damon</p>
+        <small class="text-muted">on 24.05.2019</small>
+      </td>
+      <td>
+        <p class="mb-0">June 08, 2021</p>
+        <small class="text-muted">2:00 PM</small>
+      </td>
+      <td><button class="btn btn-success btn-sm">VERIFIED</button></td>
+      <td>
+        <i class="bi bi-three-dots-vertical"></i>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <span class="avatar bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center me-2">R</span>
+          <div>
+            <p class="mb-0">Contact Email Not Linked</p>
+            <small class="text-muted">Updated 1 day ago</small>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="mb-0">Robert Downey</p>
+        <small class="text-muted">on 24.05.2019</small>
+      </td>
+      <td>
+        <p class="mb-0">June 09, 2021</p>
+        <small class="text-muted">6:30 PM</small>
+      </td>
+      <td><button class="btn btn-success btn-sm">VERIFIED</button></td>
+      <td>
+        <i class="bi bi-three-dots-vertical"></i>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <span class="avatar bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center me-2">C</span>
+          <div>
+            <p class="mb-0">Contact Email Not Linked</p>
+            <small class="text-muted">Updated 1 day ago</small>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="mb-0">Christian Bale</p>
+        <small class="text-muted">on 24.05.2019</small>
+      </td>
+      <td>
+        <p class="mb-0">June 09, 2021</p>
+        <small class="text-muted">6:30 PM</small>
+      </td>
+      <td><button class="btn btn-warning btn-sm">PENDING</button></td>
+      <td>
+        <i class="bi bi-three-dots-vertical"></i>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <span class="avatar bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center me-2">H</span>
+          <div>
+            <p class="mb-0">Contact Email Not Linked</p>
+            <small class="text-muted">Updated 1 day ago</small>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="mb-0">Henry Cavil</p>
+        <small class="text-muted">on 24.05.2019</small>
+      </td>
+      <td>
+        <p class="mb-0">June 09, 2021</p>
+        <small class="text-muted">6:30 PM</small>
+      </td>
+      <td><button class="btn btn-warning btn-sm">PENDING</button></td>
+      <td>
+        <i class="bi bi-three-dots-vertical"></i>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <span class="avatar bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center me-2">C</span>
+          <div>
+            <p class="mb-0">Contact Email Not Linked</p>
+            <small class="text-muted">Updated 1 day ago</small>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="mb-0">Chris Evans</p>
+        <small class="text-muted">on 24.05.2019</small>
+      </td>
+      <td>
+        <p class="mb-0">June 09, 2021</p>
+        <small class="text-muted">6:30 PM</small>
+      </td>
+      <td><button class="btn btn-warning btn-sm">PENDING</button></td>
+      <td>
+        <i class="bi bi-three-dots-vertical"></i>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="d-flex align-items-center">
+          <span class="avatar bg-secondary text-white rounded-circle d-flex justify-content-center align-items-center me-2">S</span>
+          <div>
+            <p class="mb-0">Contact Email Not Linked</p>
+            <small class="text-muted">Updated 1 day ago</small>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="mb-0">Sam Smith</p>
+        <small class="text-muted">on 24.05.2019</small>
+      </td>
+      <td>
+        <p class="mb-0">June 09, 2021</p>
+        <small class="text-muted">6:30 PM</small>
+      </td>
+      <td><button class="btn btn-warning btn-sm">PENDING</button></td>
+      <td>
+        <i class="bi bi-three-dots-vertical"></i>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+
+</div>
+
+</main>
+
+
+<style>
+  .bg-dashboard {
+  display: flex; 
+      
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.sidebar {
+  background-color: #132E1A;
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;            /* Prevent shrinking */
+}
+
+.dashboard-content {
+  width: 1230px;             /* Fixed width for main content */
+  background-color:rgb(216, 212, 212);
+  min-height: 100vh;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+
+  .nav-link-q {
+  color: #ffffff;
+  margin: 2px 0;
+  padding: 10px 16px;
+  width: 230px;
+  height: 44.21px;
+  border-radius: 6px;
+  text-decoration: none;
+  border:2px #132E1A ;
+  
+  background-color: rgba(10, 81, 47, 0.42); /* semi-transparent green */
+  box-shadow: 0 4px 6px rgba(19, 46, 26, 0.4); /* subtle drop shadow */
+  transition: background 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and text */
+}
+
+.nav-link-q:hover {
+  background-color: rgba(10, 81, 47, 0.65);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+
+
+  .dash-icon {
+  width: 84px;
+  height: 100px;
+  background-color: #0A512F;
+  color: white;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-box {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 270px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  margin-top: 20px;
+}
+
+
+.applied-card{
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+ 
+  width: 1150px;
+  margin: 20px;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.custom-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.custom-table th,
+.custom-table td {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: none;
+  border-right: none;
+  padding: 12px 12px;
+  text-align: left;
+}
+
+
+.custom-table thead th {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  letter-spacing: 0.2px;
+}
+
+.custom-table tbody td p {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  padding-top: 20px;
+  margin: 0;
+}
+
+.custom-table tbody td small {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  color: #6c757d; /* Bootstrap's text-muted color */
+}
+
+
+  @media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      z-index: 1000;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+      transform: translateX(0);
+    }
+
+    .dashboard-content {
+      margin-left: 0;
+      padding-top: 70px;
+    }
+  }
+</style>
+
+<!-- Optional: Add Bootstrap 5 and Bootstrap Icons if not already included -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<%- include("partials/footer") %>

@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+form input, form textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 300px;
+  padding: 8px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.menu-icon{
+    width:32px;
+}

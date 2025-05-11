@@ -1,0 +1,123 @@
+<%- include("partials/header") %>
+<div class="login-container">
+  <div class="login-card">
+    <h2>Login</h2>
+    <form action="/login" method="post">
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+      </div>
+      <button type="submit" class="btn-submit">Login</button>
+    </form>
+    <p class="signup-link">Don't have an account? <a href="/signup">Sign Up</a></p>
+  </div>
+</div>
+
+<% if (success_msg) { %>
+  <div class="alert alert-success"><%= success_msg %></div>
+<% } %>
+<% if (error_msg) { %>
+  <div class="alert alert-danger"><%= error_msg %></div>
+<% } %>
+
+
+ <style>
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6e7dff, #a8c0ff);
+  height: 100vh;
+  color: #333;
+  width: 100%;  
+  flex-direction: column;
+}
+
+/* Login Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.login-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #4a4a4a;
+}
+
+/* Input Fields */
+.input-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #6e7dff;
+}
+
+/* Submit Button */
+.btn-submit {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #6e7dff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #5a6bcf;
+}
+
+/* Sign Up Link */
+.signup-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.signup-link a {
+  color: #6e7dff;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+</style>
+<%- include("partials/footer") %>

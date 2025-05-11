@@ -1,0 +1,86 @@
+<%- include('../partials/header') %>
+<!-- <h1>Loan Application Form</h1>
+<form action="/apply" method="POST">
+  <input type="text" name="fullName" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="number" name="loanAmount" placeholder="Loan Amount" required>
+  <textarea name="loanReason" placeholder="Reason for Loan" required></textarea>
+  <button type="submit">Submit</button>
+</form> -->
+
+<div class="bg-body py-5 d-flex justify-content-center">
+  <div class="form-card p-5 bg-white shadow rounded">
+    <h2 class="mb-4 text-center text-success fw-bold">APPLY FOR LOAN</h2>
+    <form action="/user/apply" method="POST" class="row g-4">
+      <div class="col-md-12">
+        <label class="form-label">Full name as it appears on bank account</label>
+        <input type="text" name="fullName" placeholder="Full Name" class="form-control" required>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">How much do you need?</label>
+        <input type="text" name="loanAmount" placeholder="Enter loan amount" class="form-control" required>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Loan tenure (in months)</label>
+        <input type="text" name="tenure" placeholder="Tenure in months" class="form-control" required>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Employment status</label>
+        <input type="text" name="employmentStatus" placeholder="Employment status" class="form-control" required>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Employment address</label>
+        <input type="text" name="employmentAddress" placeholder="Employment address" class="form-control" required>
+      </div>
+
+      <div class="col-md-12">
+        <label class="form-label">Reason for loan</label>
+        <textarea name="loanReason" placeholder="Reason for loan" class="form-control" rows="3" required></textarea>
+      </div>
+
+      <div class="col-md-12 text-center">
+        <button type="submit" class="btn btn-success px-4 py-2 fw-semibold">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<style>
+  .bg-body {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+  }
+
+  .form-card {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .form-label {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .form-control {
+    border-radius: 7px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+  }
+
+  .btn-success {
+    background-color: #0A5210;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  .btn-success:hover {
+    background-color: #064921;
+  }
+</style>
+
+<%- include('../partials/footer') %>
